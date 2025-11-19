@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Innovations in Artificial Intelligence</title>
+
+        <!--Using Bulma CDN-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <style>
+            body{
+                background-color: rgb(241, 220, 220);
+                font-family:arial,sans-serif;
+                min-height:100vh;
+                display:flex;
+            }
+            .section{
+                flex:1;
+            }
+            h1.title{
+                margin-top:40px;
+                color:black;
+                font-weight:500;
+            }
+
+            /*adding little animation*/
+            .card{
+                transition:all 0.3s ease-in-out;
+                border-radius:15px;
+                overflow: hidden;
+                height:100%;
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+            }
+            .card:hover{
+                transform:scale(1.03);
+                box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+                
+            }
+
+            /*ensuring img fits neatly in card*/
+            .card-image img{
+                height:200px;
+                object-fit:cover;
+                width:100%;
+                border-radius:10px 10px 0 0;
+            }
+            .card-content{
+                flex-grow:1;
+            }
+           /* default layout for desktop and laptop screens */
+           .custom-columns{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:28px;
+           }
+           .custom-columns .column{
+            flex:1 1 30%;
+            max-width:  30%;
+           }
+            /*adjusting screensize on tablets*/
+            @media(max-width:1024px){
+              .custom-columns{
+                display:flex;
+                flex-wrap: wrap ; /*it will allow cards to break into new line when needed*/
+                justify-content:center;
+                gap:20px;
+              }
+              .custom-columns .column{
+                flex:1 1 45%; /*roughly 2 cards per row*/
+                max-width: 45%;
+              }
+            }
+            /*adjusting screensize on mobile*/
+            @media(max-width:600px){
+                .custom-columns{
+                    flex-wrap:wrap;
+                    flex-direction:column;
+                    align-items: center;
+                }
+                .custom-columns .column{
+                    flex:1 1 90%;
+                    max-width:90%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <section class="section">
+            <div class="container">
+            <h1 class="title has-text-centered">Innovations in Artificial Intelligence 🤖</h1>
+            <p class="has-text-centered mb-5" style="color:#757373">Discover how AI is reshaping technology and everyday life.</p>
+
+            <!--Bulma columns (i.e responsive grid)-->
+            <div class="columns is-centered is-variable is-4 is-multiline custom-columns">
+                <!--Card 1-->
+                <div class="column is-one-third-desktop is-half-tablet is-one-third-tablet is-full-mobile">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2025/03/marquee-agentforce-ai-chatbot.png?w=1024" alt="AI Chatbot">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="title is-5">Chatbots & Virtual Assistants</h2>
+                            <p>AI-powered chatbots like ChatGPT, Alexa, and Google Assistant are transforming how humans interact with machines. They understand natural language, provide instant responses, and even learn from previous conversations to offer smarter assistance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Card 2-->
+                <div class="column is-one-third-desktop is-half-tablet is-one-third-tablet is-full-mobile">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="https://www.hyro.ai/wp-content/uploads/2023/03/medpalm-comp.png" alt="AI in Healthcare">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="title is-5">AI in Healthcare</h2>
+                            <p>Artificial intelligence is revolutionizing the healthcare industry. From predicting diseases earlier to assisting doctors with real-time analysis, AI tools are helping save lives and improve patient care. It’s one of the most meaningful uses of technology today.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Card 3-->
+                <div class="column is-one-third-desktop is-half-tablet is-one-third-tablet is-full-mobile">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="https://biz.loudoun.gov/wp-content/uploads/2018/04/auto.jpg" alt="Self-driving car">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="title is-5">Self-driving cars</h2>
+                            <p>Self-driving cars use AI to “see” the road — detecting traffic, pedestrians, and obstacles in milliseconds. They’re paving the way for safer, more efficient travel where human error becomes a thing of the past.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+</html>
